@@ -48,12 +48,12 @@ const differentStr = data.map((input) => {
   if(isOverTime){
     const overTimeLength = Math.round(_hours * 10)/10 - 10
     const startTime = moment(input.start, 'HH:mm').add(10, 'h').format('HH:mm')
-    curlStr += [`\ncurl 'http://58.246.39.26:10036/Artimes/app/addorEdit' `,
+    curlStr += [`\ncurl '${url}/Artimes/app/addorEdit' `,
       `-H 'Cookie: JSESSIONID=${Cookie}; password=; rempwd=; username=${username}; urole=${urole}' `,
-      `-H 'Origin: http://58.246.39.26:10036' -H 'Accept-Encoding: gzip, deflate' -H 'Accept-Language: zh-CN,zh;q=0.8,en;q=0.6' `,
+      `-H 'Origin: ${url}' -H 'Accept-Encoding: gzip, deflate' -H 'Accept-Language: zh-CN,zh;q=0.8,en;q=0.6' `,
       `-H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36' `,
       `-H 'Content-Type: application/json; charset=UTF-8' -H 'Accept: application/json, text/javascript, */*; q=0.01' `,
-      `-H 'http://58.246.39.26:10036/Artimes/app/index' -H 'X-Requested-With: XMLHttpRequest' `,
+      `-H '${url}/Artimes/app/index' -H 'X-Requested-With: XMLHttpRequest' `,
       `-H 'Connection: keep-alive' --data-binary `,
       `$'[{"app_id":"${appId}","ticket_id":"${ticketId}","plan":true,"daily":false,"type":"Others",`,
       `"time":"${overTimeLength}","desc":"${input.desc}","dayOfweek":${dayOfweek},"week":"${week}","timesheetId":"n1",`,
