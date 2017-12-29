@@ -17,7 +17,7 @@ const ticketId = '' // 需求号: 例 I13-151201-7
 const Cookie = '' // cookie 需登录网站获取 例 8DBA06CA87781260C2023475912DF745
 const username = '' // 用户名 例 zhuyucai
 const urole = '' // 不知道 建议登录网站获取下 例 %E5%85%B6%E4%BB%96%2C
-const url = 'http://58.246.39.26:10036'
+const url = 'http://58.246.39.26:10036' // 根据实际地址更改
 
 const startToEnd = moment(endDate).diff(moment(startDate), 'days')
 const curlStr = _.range(startToEnd).map((i) => {
