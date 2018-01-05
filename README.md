@@ -14,5 +14,5 @@ node same.js 或 node different.js
 执行生成的文件same.sh / different.sh
 
 // node版
-// 编辑中
+编辑node/same.js 将必填项填写完 执行即可
 ```
